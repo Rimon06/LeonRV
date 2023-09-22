@@ -1,0 +1,54 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Fri Sep  8 23:21:31 2023
+[*]
+[dumpfile] "/home/jfdava/Universidad/1Trabajo de Grado/Proyecto_HDL/SOCnexpov8/dump.vcd"
+[dumpfile_mtime] "Fri Sep  8 04:12:49 2023"
+[dumpfile_size] 333588318
+[savefile] "/home/jfdava/Universidad/1Trabajo de Grado/Proyecto_HDL/SOCnexpov8/1qa.gtkw"
+[timestart] 719960000
+[size] 1000 600
+[pos] 201 44
+*-22.000000 525000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] SOCnexpoV3_tb.
+[treeopen] SOCnexpoV3_tb.uut.
+[treeopen] SOCnexpoV3_tb.uut.oled.
+[sst_width] 196
+[signals_width] 213
+[sst_expanded] 1
+[sst_vpaned_height] 150
+@28
+SOCnexpoV3_tb.uut.rst
+SOCnexpoV3_tb.uut.clk12MHz
+@22
+SOCnexpoV3_tb.uut.RV32I.F_pc[31:0]
+SOCnexpoV3_tb.uut.RV32I.FD_instr[31:0]
+SOCnexpoV3_tb.uut.RV32I.Wb_rd[4:0]
+@28
+SOCnexpoV3_tb.uut.RV32I.D_isSTORE
+SOCnexpoV3_tb.uut.RV32I.E_M_fwd_rs1
+SOCnexpoV3_tb.uut.RV32I.E_M_fwd_rs2
+SOCnexpoV3_tb.uut.RV32I.E_W_fwd_rs1
+SOCnexpoV3_tb.uut.RV32I.E_W_fwd_rs2
+@22
+SOCnexpoV3_tb.uut.oled.character[7:0]
+@28
+SOCnexpoV3_tb.uut.oled_comm_val
+@22
+SOCnexpoV3_tb.uut.RV32I.mem_out[31:0]
+SOCnexpoV3_tb.uut.oled.character[7:0]
+SOCnexpoV3_tb.uut.oled.spi_in[7:0]
+@28
+SOCnexpoV3_tb.uut.oled.sck
+SOCnexpoV3_tb.uut.oled.sda
+SOCnexpoV3_tb.uut.D_C
+SOCnexpoV3_tb.uut.RES
+SOCnexpoV3_tb.uut.SS_
+@22
+SOCnexpoV3_tb.uut.oled.uut.D_out[7:0]
+@28
+SOCnexpoV3_tb.uut.oled.next
+SOCnexpoV3_tb.uut.oled.next_char
+SOCnexpoV3_tb.uut.oled.spi_working
+[pattern_trace] 1
+[pattern_trace] 0

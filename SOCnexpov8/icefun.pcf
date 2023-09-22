@@ -1,0 +1,29 @@
+set_io --warn-no-port led[0] 	C10
+set_io --warn-no-port led[1]	A10
+set_io --warn-no-port led[2]	D7
+set_io --warn-no-port led[3]	D6
+set_io --warn-no-port led[4] 	A7
+set_io --warn-no-port led[5] 	C7
+set_io --warn-no-port led[6] 	A4
+set_io --warn-no-port led[7] 	C4
+set_io --warn-no-port lcol[3]	A12
+set_io --warn-no-port lcol[2]	D10
+set_io --warn-no-port lcol[1]	A6
+set_io --warn-no-port lcol[0]	C5
+set_io --warn-no-port spkp  	M12
+set_io --warn-no-port spkm  	M6
+set_io --warn-no-port key[0]	C11
+set_io --warn-no-port key[1]	C6
+set_io --warn-no-port key[2]	A11
+set_io --warn-no-port key[3]	A5
+
+set_io --warn-no-port clk12MHz	P7
+
+set_io --warn-no-port RXD		N1
+set_io --warn-no-port TXD		P1
+
+set_io --warn-no-port SCK		A3
+set_io --warn-no-port SDA		A2
+set_io --warn-no-port RES		A1
+set_io --warn-no-port D_C		C3
+set_io --warn-no-port SS_		D3
