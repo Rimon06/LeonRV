@@ -1,0 +1,815 @@
+/home/jfdava/.apio
+/home/jfdava/.apio
+[Thu Sep  7 22:48:19 2023] Processing icefun
+--------------------------------------------------------------------------------
+yosys -p "synth_ice40 -json hardware.json" -q ControladorMatrizLed.v SOCnexpoV8_.v uart.v
+Warning: wire '\character' is assigned in a block at ../SSD1306_SPI.v:245.
+SOCnexpoV8_.v:258: Warning: Identifier `\busy' is implicitly declared.
+icefunprog /dev/ttyACM0 hardware.bin
+Flash ID 0x1f 0x85 0x1
+Program length 135100
+Erase pages 3
+Erasing sector 0x00000
+Erase sector response 0xb0
+Erasing sector 0x10000
+Erase sector response 0xb0
+Erasing sector 0x20000
+Erase sector response 0xb0
+################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+Flash ok
+Release response 0x0
+========================= [SUCCESS] Took 77.23 seconds =========================
+/home/jfdava/.apio
+/home/jfdava/.apio
+[Thu Sep  7 23:17:50 2023] Processing icefun
+--------------------------------------------------------------------------------
+icefunprog /dev/ttyACM0 hardware.bin
+Flash ID 0x1f 0x85 0x1
+Program length 135100
+Erase pages 3
+Erasing sector 0x00000
+Erase sector response 0xb0
+Erasing sector 0x10000
+Erase sector response 0xb0
+Erasing sector 0x20000
+Erase sector response 0xb0
+################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+Flash ok
+Release response 0x0
+========================= [SUCCESS] Took 6.48 seconds =========================
+/home/jfdava/.apio
+/home/jfdava/.apio
+[Thu Sep  7 23:18:25 2023] Processing icefun
+--------------------------------------------------------------------------------
+yosys -p "synth_ice40 -json hardware.json" -q ControladorMatrizLed.v SOCnexpoV8_.v uart.v
+Warning: wire '\character' is assigned in a block at ../SSD1306_SPI.v:245.
+/home/jfdava/.apio
+/home/jfdava/.apio
+[Thu Sep  7 23:19:35 2023] Processing icefun
+--------------------------------------------------------------------------------
+yosys -p "synth_ice40 -json hardware.json" -q ControladorMatrizLed.v SOCnexpoV8_.v uart.v
+nextpnr-ice40 --hx8k --package cb132 --json hardware.json --asc hardware.asc --pcf icefun.pcf
+Info: Importing module SOCnexpo
+Info: Rule checker, verifying imported design
+Info: Checksum: 0x22ff118c
+
+Info: constrained 'led[0]' to bel 'X22/Y33/io1'
+Info: constrained 'led[1]' to bel 'X25/Y33/io0'
+Info: constrained 'led[2]' to bel 'X13/Y33/io1'
+Info: constrained 'led[3]' to bel 'X11/Y33/io0'
+Info: constrained 'led[4]' to bel 'X17/Y33/io0'
+Info: constrained 'led[5]' to bel 'X14/Y33/io1'
+Info: constrained 'led[6]' to bel 'X5/Y33/io0'
+Info: constrained 'led[7]' to bel 'X4/Y33/io0'
+Info: constrained 'lcol[3]' to bel 'X30/Y33/io1'
+Info: constrained 'lcol[2]' to bel 'X27/Y33/io0'
+Info: constrained 'lcol[1]' to bel 'X16/Y33/io1'
+Info: constrained 'lcol[0]' to bel 'X8/Y33/io1'
+Warning: unmatched constraint 'spkp' (on line 13)
+Warning: unmatched constraint 'spkm' (on line 14)
+Info: constrained 'key[0]' to bel 'X28/Y33/io1'
+Info: constrained 'key[1]' to bel 'X11/Y33/io1'
+Info: constrained 'key[2]' to bel 'X26/Y33/io0'
+Info: constrained 'key[3]' to bel 'X10/Y33/io1'
+Info: constrained 'clk12MHz' to bel 'X16/Y0/io1'
+Info: constrained 'RXD' to bel 'X0/Y4/io1'
+Info: constrained 'TXD' to bel 'X0/Y4/io0'
+Info: constrained 'SCK' to bel 'X3/Y33/io1'
+Info: constrained 'SDA' to bel 'X3/Y33/io0'
+Info: constrained 'RES' to bel 'X2/Y33/io0'
+Info: constrained 'D_C' to bel 'X0/Y27/io1'
+Info: constrained 'SS_' to bel 'X0/Y27/io0'
+
+Info: Packing constants..
+Info: Packing IOs..
+Info: Packing LUT-FFs..
+Info:     3266 LCs used as LUT4 only
+Info:      569 LCs used as LUT4 and DFF
+Info: Packing non-LUT FFs..
+Info:     1240 LCs used as DFF only
+Info: Packing carries..
+Info:       27 LCs used as CARRY only
+Info: Packing RAMs..
+Info: Placing PLLs..
+Info: Packing special functions..
+Info: Promoting globals..
+Info: promoting clk12MHz$SB_IO_IN (fanout 1851)
+Info: promoting rst [reset] (fanout 273)
+Info: promoting RV32I.DE_rs1Data_SB_DFFESR_Q_R [reset] (fanout 32)
+Info: promoting RV32I.DE_rs2Data_SB_DFFESR_Q_R [reset] (fanout 32)
+Info: promoting oled.Wr_char_SB_LUT4_O_I2_SB_LUT4_I2_O [reset] (fanout 28)
+Info: promoting RV32I.DE_CSRRead_SB_LUT4_I3_O_SB_LUT4_I3_2_O [cen] (fanout 146)
+Info: promoting RV32I.DE_error_SB_LUT4_I2_O_SB_LUT4_I3_O [cen] (fanout 116)
+Info: promoting RV32I.MW_nop_SB_LUT4_I2_O [cen] (fanout 64)
+Info: Constraining chains...
+Info:       17 LCs used to legalise carry chains.
+Info: Checksum: 0x9ff3b0ce
+
+Info: Annotating ports with timing budgets for target frequency 12.00 MHz
+Info: Checksum: 0x2d7745d2
+
+Info: Device utilisation:
+Info: 	         ICESTORM_LC:  5121/ 7680    66%
+Info: 	        ICESTORM_RAM:    29/   32    90%
+Info: 	               SB_IO:    24/  256     9%
+Info: 	               SB_GB:     8/    8   100%
+Info: 	        ICESTORM_PLL:     0/    2     0%
+Info: 	         SB_WARMBOOT:     0/    1     0%
+
+Info: Placed 24 cells based on constraints.
+Info: Creating initial analytic placement for 4815 cells, random placement wirelen = 147303.
+Info:     at initial placer iter 0, wirelen = 876
+Info:     at initial placer iter 1, wirelen = 858
+Info:     at initial placer iter 2, wirelen = 843
+Info:     at initial placer iter 3, wirelen = 837
+Info: Running main analytical placer.
+Info:     at iteration #1, type ALL: wirelen solved = 864, spread = 34828, legal = 51469; time = 1.43s
+Info:     at iteration #2, type ALL: wirelen solved = 3251, spread = 31361, legal = 48341; time = 1.38s
+Info:     at iteration #3, type ALL: wirelen solved = 4986, spread = 27280, legal = 48228; time = 1.41s
+Info:     at iteration #4, type ALL: wirelen solved = 6999, spread = 25454, legal = 48457; time = 1.61s
+Info:     at iteration #5, type ALL: wirelen solved = 7977, spread = 24550, legal = 48118; time = 1.60s
+Info:     at iteration #6, type ALL: wirelen solved = 9884, spread = 24206, legal = 45062; time = 1.36s
+Info:     at iteration #7, type ALL: wirelen solved = 11574, spread = 23416, legal = 43975; time = 1.74s
+Info:     at iteration #8, type ALL: wirelen solved = 12518, spread = 23498, legal = 42742; time = 1.36s
+Info:     at iteration #9, type ALL: wirelen solved = 13338, spread = 23022, legal = 44780; time = 4.30s
+Info:     at iteration #10, type ALL: wirelen solved = 14766, spread = 23419, legal = 44358; time = 1.29s
+Info:     at iteration #11, type ALL: wirelen solved = 15451, spread = 23456, legal = 45407; time = 1.28s
+Info:     at iteration #12, type ALL: wirelen solved = 16507, spread = 24299, legal = 45617; time = 1.32s
+Info:     at iteration #13, type ALL: wirelen solved = 17312, spread = 23932, legal = 45200; time = 1.23s
+Info: HeAP Placer Time: 26.35s
+Info:   of which solving equations: 6.31s
+Info:   of which spreading cells: 0.88s
+Info:   of which strict legalisation: 15.44s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 2479, wirelen = 42742
+Info:   at iteration #5: temp = 0.000000, timing cost = 1858, wirelen = 36415
+Info:   at iteration #10: temp = 0.000000, timing cost = 1744, wirelen = 33867
+Info:   at iteration #15: temp = 0.000000, timing cost = 1681, wirelen = 32470
+Info:   at iteration #20: temp = 0.000000, timing cost = 1609, wirelen = 31400
+Info:   at iteration #25: temp = 0.000000, timing cost = 1605, wirelen = 30742
+Info:   at iteration #30: temp = 0.000000, timing cost = 1560, wirelen = 30542
+Info:   at iteration #35: temp = 0.000000, timing cost = 1543, wirelen = 30451
+Info:   at iteration #37: temp = 0.000000, timing cost = 1543, wirelen = 30439
+Info: SA placement time 36.23s
+
+Info: Max frequency for clock 'clk12MHz$SB_IO_IN_$glb_clk': 29.87 MHz (PASS at 12.00 MHz)
+
+Info: Max delay <async>                            -> posedge clk12MHz$SB_IO_IN_$glb_clk: 4.78 ns
+Info: Max delay posedge clk12MHz$SB_IO_IN_$glb_clk -> <async>                           : 4.80 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 18 endpoint(s)
+Info:          + represents [1,18) endpoint(s)
+Info: [ 27983,  30698) |*****************************************+
+Info: [ 30698,  33413) |**************+
+Info: [ 33413,  36128) |************************************************************
+Info: [ 36128,  38843) |***+
+Info: [ 38843,  41558) |
+Info: [ 41558,  44273) |
+Info: [ 44273,  46988) |
+Info: [ 46988,  49703) |
+Info: [ 49703,  52418) |*+
+Info: [ 52418,  55133) |****+
+Info: [ 55133,  57848) |***+
+Info: [ 57848,  60563) |+
+Info: [ 60563,  63278) |*******+
+Info: [ 63278,  65993) |************+
+Info: [ 65993,  68708) |*********+
+Info: [ 68708,  71423) |**************+
+Info: [ 71423,  74138) |*********************************+
+Info: [ 74138,  76853) |***********************+
+Info: [ 76853,  79568) |************************+
+Info: [ 79568,  82283) |*******************************************************+
+Info: Checksum: 0xae9e33d6
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 17216 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs
+Info:       1000 |       22        977 |   22   977 |     16246
+Info:       2000 |      101       1898 |   79   921 |     15337
+Info:       3000 |      134       2865 |   33   967 |     14387
+Info:       4000 |      218       3781 |   84   916 |     13496
+Info:       5000 |      296       4703 |   78   922 |     12597
+Info:       6000 |      339       5660 |   43   957 |     11662
+Info:       7000 |      381       6618 |   42   958 |     10707
+Info:       8000 |      477       7522 |   96   904 |      9840
+Info:       9000 |      554       8445 |   77   923 |      8938
+Info:      10000 |      687       9312 |  133   867 |      8121
+Info:      11000 |      898      10101 |  211   789 |      7432
+Info:      12000 |     1150      10849 |  252   748 |      6874
+Info:      13000 |     1485      11514 |  335   665 |      6472
+Info:      14000 |     1776      12223 |  291   709 |      5975
+Info:      15000 |     2014      12985 |  238   762 |      5304
+Info:      16000 |     2276      13723 |  262   738 |      4703
+Info:      17000 |     2570      14429 |  294   706 |      4131
+Info:      18000 |     2938      15061 |  368   632 |      3692
+Info:      19000 |     3276      15723 |  338   662 |      3363
+Info:      20000 |     3666      16333 |  390   610 |      3031
+Info:      21000 |     4168      16831 |  502   498 |      2886
+Info:      22000 |     4586      17413 |  418   582 |      2715
+Info:      23000 |     5077      17922 |  491   509 |      2581
+Info:      24000 |     5546      18453 |  469   531 |      2421
+Info:      25000 |     6050      18949 |  504   496 |      2327
+Info:      26000 |     6563      19436 |  513   487 |      2154
+Info:      27000 |     7070      19929 |  507   493 |      2045
+Info:      28000 |     7510      20489 |  440   560 |      1861
+Info:      29000 |     7964      21035 |  454   546 |      1742
+Info:      30000 |     8438      21561 |  474   526 |      1689
+Info:      31000 |     8969      22030 |  531   469 |      1607
+Info:      32000 |     9449      22550 |  480   520 |      1568
+Info:      33000 |     9934      23065 |  485   515 |      1512
+Info:      34000 |    10362      23637 |  428   572 |      1472
+Info:      35000 |    10916      24083 |  554   446 |      1422
+Info:      36000 |    11396      24603 |  480   520 |      1316
+Info:      37000 |    11723      25276 |  327   673 |       917
+Info:      38000 |    11962      26037 |  239   761 |       355
+Info:      39000 |    12451      26548 |  489   511 |       308
+Info:      40000 |    12905      27094 |  454   546 |       178
+Info:      40420 |    13049      27371 |  144   277 |         0
+Info: Routing complete.
+Info: Route time 92.08s
+Info: Checksum: 0x724f5329
+
+Info: Critical path report for clock 'clk12MHz$SB_IO_IN_$glb_clk' (posedge -> posedge):
+Info: curr total
+Info:  2.1  2.1  Source RAM.memArray.3.2.0_RAM.RDATA_12
+Info:  1.9  4.1    Net RAM.memArray.3.2.0_RDATA_1 budget 0.000000 ns (25,19) -> (15,18)
+Info:                Sink RAM.memArray.3.2.0_RDATA_1_SB_LUT4_I1_LC.I1
+Info:  0.4  4.4  Source RAM.memArray.3.2.0_RDATA_1_SB_LUT4_I1_LC.O
+Info:  0.6  5.0    Net RAM.memArray.3.2.0_RDATA_1_SB_LUT4_I1_O budget 0.000000 ns (15,18) -> (15,17)
+Info:                Sink RAM.memArray.3.0.0_RDATA_1_SB_LUT4_I0_O_SB_LUT4_I2_LC.I3
+Info:  0.3  5.4  Source RAM.memArray.3.0.0_RDATA_1_SB_LUT4_I0_O_SB_LUT4_I2_LC.O
+Info:  0.6  5.9    Net RAM.memArray.3.0.0_RDATA_1_SB_LUT4_I0_O_SB_LUT4_I2_O budget 0.000000 ns (15,17) -> (14,17)
+Info:                Sink RV32I.Wb_rdData_SB_LUT4_O_30_I3_SB_LUT4_O_I3_SB_LUT4_O_LC.I2
+Info:  0.4  6.3  Source RV32I.Wb_rdData_SB_LUT4_O_30_I3_SB_LUT4_O_I3_SB_LUT4_O_LC.O
+Info:  1.6  7.9    Net RV32I.Wb_rdData_SB_LUT4_O_30_I3_SB_LUT4_O_I3 budget 0.000000 ns (14,17) -> (14,13)
+Info:                Sink RV32I.Wb_rdData_SB_LUT4_O_30_I3_SB_LUT4_O_LC.I3
+Info:  0.3  8.2  Source RV32I.Wb_rdData_SB_LUT4_O_30_I3_SB_LUT4_O_LC.O
+Info:  2.0 10.2    Net RV32I.Wb_rdData_SB_LUT4_O_30_I3 budget 0.000000 ns (14,13) -> (10,5)
+Info:                Sink RV32I.Wb_rdData_SB_LUT4_O_30_LC.I3
+Info:  0.3 10.5  Source RV32I.Wb_rdData_SB_LUT4_O_30_LC.O
+Info:  1.6 12.1    Net RV32I.Wb_rdData[6] budget 0.000000 ns (10,5) -> (12,10)
+Info:                Sink RV32I.E_rs2Data_SB_LUT4_O_24_I2_SB_LUT4_O_LC.I2
+Info:  0.4 12.5  Source RV32I.E_rs2Data_SB_LUT4_O_24_I2_SB_LUT4_O_LC.O
+Info:  0.6 13.1    Net RV32I.E_rs2Data_SB_LUT4_O_24_I2 budget 0.000000 ns (12,10) -> (12,10)
+Info:                Sink RV32I.E_rs2Data_SB_LUT4_O_24_LC.I2
+Info:  0.4 13.5  Source RV32I.E_rs2Data_SB_LUT4_O_24_LC.O
+Info:  2.0 15.4    Net RV32I.E_rs2Data[6] budget 0.000000 ns (12,10) -> (5,15)
+Info:                Sink RV32I.alu.in2_SB_LUT4_O_24_I3_SB_LUT4_O_LC.I2
+Info:  0.4 15.8  Source RV32I.alu.in2_SB_LUT4_O_24_I3_SB_LUT4_O_LC.O
+Info:  1.6 17.4    Net RV32I.alu.in2_SB_LUT4_O_24_I3 budget 0.000000 ns (5,15) -> (7,16)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_3_LC.I2
+Info:  0.2 17.6  Source RV32I.alu.minus_SB_LUT4_O_3_LC.COUT
+Info:  0.0 17.6    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[7] budget 0.000000 ns (7,16) -> (7,16)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_2_LC.CIN
+Info:  0.1 17.8  Source RV32I.alu.minus_SB_LUT4_O_2_LC.COUT
+Info:  0.2 18.0    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[8] budget 0.190000 ns (7,16) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_1_LC.CIN
+Info:  0.1 18.1  Source RV32I.alu.minus_SB_LUT4_O_1_LC.COUT
+Info:  0.0 18.1    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[9] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_LC.CIN
+Info:  0.1 18.2  Source RV32I.alu.minus_SB_LUT4_O_LC.COUT
+Info:  0.0 18.2    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[10] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_30_LC.CIN
+Info:  0.1 18.3  Source RV32I.alu.minus_SB_LUT4_O_30_LC.COUT
+Info:  0.0 18.3    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[11] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_29_LC.CIN
+Info:  0.1 18.5  Source RV32I.alu.minus_SB_LUT4_O_29_LC.COUT
+Info:  0.0 18.5    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[12] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_28_LC.CIN
+Info:  0.1 18.6  Source RV32I.alu.minus_SB_LUT4_O_28_LC.COUT
+Info:  0.0 18.6    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[13] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_27_LC.CIN
+Info:  0.1 18.7  Source RV32I.alu.minus_SB_LUT4_O_27_LC.COUT
+Info:  0.0 18.7    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[14] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_26_LC.CIN
+Info:  0.1 18.8  Source RV32I.alu.minus_SB_LUT4_O_26_LC.COUT
+Info:  0.0 18.8    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[15] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_25_LC.CIN
+Info:  0.1 19.0  Source RV32I.alu.minus_SB_LUT4_O_25_LC.COUT
+Info:  0.2 19.2    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[16] budget 0.190000 ns (7,17) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_24_LC.CIN
+Info:  0.1 19.3  Source RV32I.alu.minus_SB_LUT4_O_24_LC.COUT
+Info:  0.0 19.3    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[17] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_23_LC.CIN
+Info:  0.1 19.4  Source RV32I.alu.minus_SB_LUT4_O_23_LC.COUT
+Info:  0.0 19.4    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[18] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_22_LC.CIN
+Info:  0.1 19.5  Source RV32I.alu.minus_SB_LUT4_O_22_LC.COUT
+Info:  0.0 19.5    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[19] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_21_LC.CIN
+Info:  0.1 19.7  Source RV32I.alu.minus_SB_LUT4_O_21_LC.COUT
+Info:  0.0 19.7    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[20] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_19_LC.CIN
+Info:  0.1 19.8  Source RV32I.alu.minus_SB_LUT4_O_19_LC.COUT
+Info:  0.0 19.8    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[21] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_18_LC.CIN
+Info:  0.1 19.9  Source RV32I.alu.minus_SB_LUT4_O_18_LC.COUT
+Info:  0.0 19.9    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[22] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_17_LC.CIN
+Info:  0.1 20.0  Source RV32I.alu.minus_SB_LUT4_O_17_LC.COUT
+Info:  0.0 20.0    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[23] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_16_LC.CIN
+Info:  0.1 20.2  Source RV32I.alu.minus_SB_LUT4_O_16_LC.COUT
+Info:  0.2 20.4    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[24] budget 0.190000 ns (7,18) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_15_LC.CIN
+Info:  0.1 20.5  Source RV32I.alu.minus_SB_LUT4_O_15_LC.COUT
+Info:  0.0 20.5    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[25] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_14_LC.CIN
+Info:  0.1 20.6  Source RV32I.alu.minus_SB_LUT4_O_14_LC.COUT
+Info:  0.0 20.6    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[26] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_13_LC.CIN
+Info:  0.1 20.7  Source RV32I.alu.minus_SB_LUT4_O_13_LC.COUT
+Info:  0.0 20.7    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[27] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_12_LC.CIN
+Info:  0.1 20.9  Source RV32I.alu.minus_SB_LUT4_O_12_LC.COUT
+Info:  0.0 20.9    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[28] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_11_LC.CIN
+Info:  0.1 21.0  Source RV32I.alu.minus_SB_LUT4_O_11_LC.COUT
+Info:  0.0 21.0    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[29] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_10_LC.CIN
+Info:  0.1 21.1  Source RV32I.alu.minus_SB_LUT4_O_10_LC.COUT
+Info:  0.0 21.1    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[30] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_8_LC.CIN
+Info:  0.1 21.2  Source RV32I.alu.minus_SB_LUT4_O_8_LC.COUT
+Info:  0.3 21.5    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[31] budget 0.260000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_7_LC.I3
+Info:  0.3 21.8  Source RV32I.alu.minus_SB_LUT4_O_7_LC.O
+Info:  0.6 22.4    Net RV32I.alu.minus[31] budget 3.440000 ns (7,19) -> (6,19)
+Info:                Sink RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_O_LC.I0
+Info:  0.4 22.9  Source RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_O_LC.O
+Info:  0.6 23.4    Net RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I1 budget 3.248000 ns (6,19) -> (6,19)
+Info:                Sink RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_LC.I1
+Info:  0.4 23.8  Source RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_LC.O
+Info:  1.1 25.0    Net RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1 budget 2.768000 ns (6,19) -> (10,19)
+Info:                Sink RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_LC.I1
+Info:  0.4 25.4  Source RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_LC.O
+Info:  0.6 26.0    Net RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0 budget 2.768000 ns (10,19) -> (10,20)
+Info:                Sink RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_LC.I0
+Info:  0.4 26.4  Source RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_LC.O
+Info:  0.6 27.0    Net RV32I.DE_isBRANCH_SB_LUT4_I3_I2 budget 3.178000 ns (10,20) -> (9,21)
+Info:                Sink RV32I.DE_isBRANCH_SB_LUT4_I3_LC.I2
+Info:  0.4 27.4  Source RV32I.DE_isBRANCH_SB_LUT4_I3_LC.O
+Info:  2.0 29.3    Net RV32I.DE_isBRANCH_SB_LUT4_I3_O budget 3.578000 ns (9,21) -> (2,25)
+Info:                Sink RV32I.F_pc_SB_DFFESR_Q_31_E_SB_LUT4_O_I3_SB_LUT4_O_LC.I3
+Info:  0.3 29.6  Source RV32I.F_pc_SB_DFFESR_Q_31_E_SB_LUT4_O_I3_SB_LUT4_O_LC.O
+Info:  1.3 31.0    Net RV32I.F_pc_SB_DFFESR_Q_31_E_SB_LUT4_O_I3 budget 2.899000 ns (2,25) -> (3,23)
+Info:                Sink RV32I.F_pc_SB_DFFESR_Q_31_E_SB_LUT4_O_LC.I3
+Info:  0.3 31.3  Source RV32I.F_pc_SB_DFFESR_Q_31_E_SB_LUT4_O_LC.O
+Info:  3.7 35.0    Net RV32I.F_pc_SB_DFFESR_Q_31_E budget 3.861000 ns (3,23) -> (27,20)
+Info:                Sink RV32I.E_JumpAddr_SB_LUT4_O_LC.CEN
+Info:  0.1 35.1  Setup RV32I.E_JumpAddr_SB_LUT4_O_LC.CEN
+Info: 11.4 ns logic, 23.7 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge clk12MHz$SB_IO_IN_$glb_clk':
+Info: curr total
+Info:  0.0  0.0  Source key[2]$sb_io.D_IN_0
+Info:  1.7  1.7    Net key[2]$SB_IO_IN budget 40.487999 ns (26,33) -> (26,16)
+Info:                Sink key_SB_LUT4_I3_1_LC.I3
+Info:  0.3  2.0  Source key_SB_LUT4_I3_1_LC.O
+Info:  1.9  3.9    Net key_SB_LUT4_I3_1_O budget 13.120000 ns (26,16) -> (17,12)
+Info:                Sink key_SB_LUT4_I3_O_SB_LUT4_O_LC.I1
+Info:  0.4  4.3  Setup key_SB_LUT4_I3_O_SB_LUT4_O_LC.I1
+Info: 0.7 ns logic, 3.6 ns routing
+
+Info: Critical path report for cross-domain path 'posedge clk12MHz$SB_IO_IN_$glb_clk' -> '<async>':
+Info: curr total
+Info:  0.5  0.5  Source LEDS8_4.act_row_SB_DFFSS_Q_2_D_SB_LUT4_O_LC.O
+Info:  3.6  4.1    Net lcol[1]$SB_IO_OUT budget 82.792999 ns (27,8) -> (16,33)
+Info:                Sink lcol[1]$sb_io.D_OUT_0
+Info: 0.5 ns logic, 3.6 ns routing
+
+Info: Max frequency for clock 'clk12MHz$SB_IO_IN_$glb_clk': 28.47 MHz (PASS at 12.00 MHz)
+
+Info: Max delay <async>                            -> posedge clk12MHz$SB_IO_IN_$glb_clk: 4.31 ns
+Info: Max delay posedge clk12MHz$SB_IO_IN_$glb_clk -> <async>                           : 4.11 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 19 endpoint(s)
+Info:          + represents [1,19) endpoint(s)
+Info: [ 28172,  30878) |*********************************************+
+Info: [ 30878,  33584) |**********+
+Info: [ 33584,  36290) |************************************************************
+Info: [ 36290,  38996) |*+
+Info: [ 38996,  41702) |
+Info: [ 41702,  44408) |
+Info: [ 44408,  47114) |
+Info: [ 47114,  49820) |+
+Info: [ 49820,  52526) |**+
+Info: [ 52526,  55232) |**+
+Info: [ 55232,  57938) |**+
+Info: [ 57938,  60644) |+
+Info: [ 60644,  63350) |******+
+Info: [ 63350,  66056) |*************+
+Info: [ 66056,  68762) |******+
+Info: [ 68762,  71468) |**************+
+Info: [ 71468,  74174) |**************************+
+Info: [ 74174,  76880) |********************************+
+Info: [ 76880,  79586) |**************************+
+Info: [ 79586,  82292) |*************************************************+
+2 warnings, 0 errors
+icepack hardware.asc hardware.bin
+icefunprog /dev/ttyACM0 hardware.bin
+Flash ID 0x1f 0x85 0x1
+Program length 135100
+Erase pages 3
+Erasing sector 0x00000
+Erase sector response 0xb0
+Erasing sector 0x10000
+Erase sector response 0xb0
+Erasing sector 0x20000
+Erase sector response 0xb0
+################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+Flash ok
+Release response 0x0
+======================== [SUCCESS] Took 267.00 seconds ========================
+/home/jfdava/.apio
+/home/jfdava/.apio
+[Thu Sep  7 23:53:19 2023] Processing icefun
+--------------------------------------------------------------------------------
+yosys -p "synth_ice40 -json hardware.json" -q ControladorMatrizLed.v SOCnexpoV8_.v uart.v
+nextpnr-ice40 --hx8k --package cb132 --json hardware.json --asc hardware.asc --pcf icefun.pcf
+Info: Importing module SOCnexpo
+Info: Rule checker, verifying imported design
+Info: Checksum: 0x5baae2cf
+
+Info: constrained 'led[0]' to bel 'X22/Y33/io1'
+Info: constrained 'led[1]' to bel 'X25/Y33/io0'
+Info: constrained 'led[2]' to bel 'X13/Y33/io1'
+Info: constrained 'led[3]' to bel 'X11/Y33/io0'
+Info: constrained 'led[4]' to bel 'X17/Y33/io0'
+Info: constrained 'led[5]' to bel 'X14/Y33/io1'
+Info: constrained 'led[6]' to bel 'X5/Y33/io0'
+Info: constrained 'led[7]' to bel 'X4/Y33/io0'
+Info: constrained 'lcol[3]' to bel 'X30/Y33/io1'
+Info: constrained 'lcol[2]' to bel 'X27/Y33/io0'
+Info: constrained 'lcol[1]' to bel 'X16/Y33/io1'
+Info: constrained 'lcol[0]' to bel 'X8/Y33/io1'
+Warning: unmatched constraint 'spkp' (on line 13)
+Warning: unmatched constraint 'spkm' (on line 14)
+Info: constrained 'key[0]' to bel 'X28/Y33/io1'
+Info: constrained 'key[1]' to bel 'X11/Y33/io1'
+Info: constrained 'key[2]' to bel 'X26/Y33/io0'
+Info: constrained 'key[3]' to bel 'X10/Y33/io1'
+Info: constrained 'clk12MHz' to bel 'X16/Y0/io1'
+Info: constrained 'RXD' to bel 'X0/Y4/io1'
+Info: constrained 'TXD' to bel 'X0/Y4/io0'
+Info: constrained 'SCK' to bel 'X3/Y33/io1'
+Info: constrained 'SDA' to bel 'X3/Y33/io0'
+Info: constrained 'RES' to bel 'X2/Y33/io0'
+Info: constrained 'D_C' to bel 'X0/Y27/io1'
+Info: constrained 'SS_' to bel 'X0/Y27/io0'
+
+Info: Packing constants..
+Info: Packing IOs..
+Info: Packing LUT-FFs..
+Info:     3266 LCs used as LUT4 only
+Info:      569 LCs used as LUT4 and DFF
+Info: Packing non-LUT FFs..
+Info:     1240 LCs used as DFF only
+Info: Packing carries..
+Info:       27 LCs used as CARRY only
+Info: Packing RAMs..
+Info: Placing PLLs..
+Info: Packing special functions..
+Info: Promoting globals..
+Info: promoting clk12MHz$SB_IO_IN (fanout 1851)
+Info: promoting rst [reset] (fanout 273)
+Info: promoting RV32I.DE_rs1Data_SB_DFFESR_Q_R [reset] (fanout 32)
+Info: promoting RV32I.DE_rs2Data_SB_DFFESR_Q_R [reset] (fanout 32)
+Info: promoting oled.Wr_char_SB_LUT4_O_I2_SB_LUT4_I2_O [reset] (fanout 28)
+Info: promoting RV32I.DE_CSRRead_SB_LUT4_I3_O_SB_LUT4_I3_2_O [cen] (fanout 146)
+Info: promoting RV32I.DE_error_SB_LUT4_I2_O_SB_LUT4_I3_O [cen] (fanout 116)
+Info: promoting RV32I.MW_nop_SB_LUT4_I2_O [cen] (fanout 64)
+Info: Constraining chains...
+Info:       17 LCs used to legalise carry chains.
+Info: Checksum: 0x4e7378da
+
+Info: Annotating ports with timing budgets for target frequency 12.00 MHz
+Info: Checksum: 0x0677c2fa
+
+Info: Device utilisation:
+Info: 	         ICESTORM_LC:  5121/ 7680    66%
+Info: 	        ICESTORM_RAM:    29/   32    90%
+Info: 	               SB_IO:    24/  256     9%
+Info: 	               SB_GB:     8/    8   100%
+Info: 	        ICESTORM_PLL:     0/    2     0%
+Info: 	         SB_WARMBOOT:     0/    1     0%
+
+Info: Placed 24 cells based on constraints.
+Info: Creating initial analytic placement for 4815 cells, random placement wirelen = 147303.
+Info:     at initial placer iter 0, wirelen = 876
+Info:     at initial placer iter 1, wirelen = 858
+Info:     at initial placer iter 2, wirelen = 843
+Info:     at initial placer iter 3, wirelen = 837
+Info: Running main analytical placer.
+Info:     at iteration #1, type ALL: wirelen solved = 864, spread = 34828, legal = 51469; time = 1.45s
+Info:     at iteration #2, type ALL: wirelen solved = 3251, spread = 31361, legal = 48341; time = 1.42s
+Info:     at iteration #3, type ALL: wirelen solved = 4986, spread = 27280, legal = 48228; time = 1.42s
+Info:     at iteration #4, type ALL: wirelen solved = 6999, spread = 25454, legal = 48457; time = 1.66s
+Info:     at iteration #5, type ALL: wirelen solved = 7977, spread = 24550, legal = 48118; time = 1.63s
+Info:     at iteration #6, type ALL: wirelen solved = 9884, spread = 24206, legal = 45062; time = 1.37s
+Info:     at iteration #7, type ALL: wirelen solved = 11574, spread = 23416, legal = 43975; time = 1.40s
+Info:     at iteration #8, type ALL: wirelen solved = 12518, spread = 23498, legal = 42742; time = 1.26s
+Info:     at iteration #9, type ALL: wirelen solved = 13338, spread = 23022, legal = 44780; time = 4.20s
+Info:     at iteration #10, type ALL: wirelen solved = 14766, spread = 23419, legal = 44358; time = 1.31s
+Info:     at iteration #11, type ALL: wirelen solved = 15451, spread = 23456, legal = 45407; time = 1.31s
+Info:     at iteration #12, type ALL: wirelen solved = 16507, spread = 24299, legal = 45617; time = 2.00s
+Info:     at iteration #13, type ALL: wirelen solved = 17312, spread = 23932, legal = 45200; time = 1.48s
+Info: HeAP Placer Time: 25.91s
+Info:   of which solving equations: 6.53s
+Info:   of which spreading cells: 0.97s
+Info:   of which strict legalisation: 15.73s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 2479, wirelen = 42742
+Info:   at iteration #5: temp = 0.000000, timing cost = 1858, wirelen = 36415
+Info:   at iteration #10: temp = 0.000000, timing cost = 1744, wirelen = 33867
+Info:   at iteration #15: temp = 0.000000, timing cost = 1681, wirelen = 32470
+Info:   at iteration #20: temp = 0.000000, timing cost = 1609, wirelen = 31400
+Info:   at iteration #25: temp = 0.000000, timing cost = 1605, wirelen = 30742
+Info:   at iteration #30: temp = 0.000000, timing cost = 1560, wirelen = 30542
+Info:   at iteration #35: temp = 0.000000, timing cost = 1543, wirelen = 30451
+Info:   at iteration #37: temp = 0.000000, timing cost = 1543, wirelen = 30439
+Info: SA placement time 36.66s
+
+Info: Max frequency for clock 'clk12MHz$SB_IO_IN_$glb_clk': 29.87 MHz (PASS at 12.00 MHz)
+
+Info: Max delay <async>                            -> posedge clk12MHz$SB_IO_IN_$glb_clk: 4.78 ns
+Info: Max delay posedge clk12MHz$SB_IO_IN_$glb_clk -> <async>                           : 4.80 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 18 endpoint(s)
+Info:          + represents [1,18) endpoint(s)
+Info: [ 27983,  30698) |*****************************************+
+Info: [ 30698,  33413) |**************+
+Info: [ 33413,  36128) |************************************************************
+Info: [ 36128,  38843) |***+
+Info: [ 38843,  41558) |
+Info: [ 41558,  44273) |
+Info: [ 44273,  46988) |
+Info: [ 46988,  49703) |
+Info: [ 49703,  52418) |*+
+Info: [ 52418,  55133) |****+
+Info: [ 55133,  57848) |***+
+Info: [ 57848,  60563) |+
+Info: [ 60563,  63278) |*******+
+Info: [ 63278,  65993) |************+
+Info: [ 65993,  68708) |*********+
+Info: [ 68708,  71423) |**************+
+Info: [ 71423,  74138) |*********************************+
+Info: [ 74138,  76853) |***********************+
+Info: [ 76853,  79568) |************************+
+Info: [ 79568,  82283) |*******************************************************+
+Info: Checksum: 0xd4245c3b
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 17216 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs
+Info:       1000 |       22        977 |   22   977 |     16246
+Info:       2000 |      101       1898 |   79   921 |     15337
+Info:       3000 |      134       2865 |   33   967 |     14387
+Info:       4000 |      218       3781 |   84   916 |     13496
+Info:       5000 |      296       4703 |   78   922 |     12597
+Info:       6000 |      339       5660 |   43   957 |     11662
+Info:       7000 |      381       6618 |   42   958 |     10707
+Info:       8000 |      477       7522 |   96   904 |      9840
+Info:       9000 |      554       8445 |   77   923 |      8938
+Info:      10000 |      687       9312 |  133   867 |      8121
+Info:      11000 |      898      10101 |  211   789 |      7432
+Info:      12000 |     1150      10849 |  252   748 |      6874
+Info:      13000 |     1485      11514 |  335   665 |      6472
+Info:      14000 |     1776      12223 |  291   709 |      5975
+Info:      15000 |     2014      12985 |  238   762 |      5304
+Info:      16000 |     2276      13723 |  262   738 |      4703
+Info:      17000 |     2570      14429 |  294   706 |      4131
+Info:      18000 |     2938      15061 |  368   632 |      3692
+Info:      19000 |     3276      15723 |  338   662 |      3363
+Info:      20000 |     3666      16333 |  390   610 |      3031
+Info:      21000 |     4168      16831 |  502   498 |      2886
+Info:      22000 |     4586      17413 |  418   582 |      2715
+Info:      23000 |     5077      17922 |  491   509 |      2581
+Info:      24000 |     5546      18453 |  469   531 |      2421
+Info:      25000 |     6050      18949 |  504   496 |      2327
+Info:      26000 |     6563      19436 |  513   487 |      2154
+Info:      27000 |     7070      19929 |  507   493 |      2045
+Info:      28000 |     7510      20489 |  440   560 |      1861
+Info:      29000 |     7964      21035 |  454   546 |      1742
+Info:      30000 |     8438      21561 |  474   526 |      1689
+Info:      31000 |     8969      22030 |  531   469 |      1607
+Info:      32000 |     9449      22550 |  480   520 |      1568
+Info:      33000 |     9934      23065 |  485   515 |      1512
+Info:      34000 |    10362      23637 |  428   572 |      1472
+Info:      35000 |    10916      24083 |  554   446 |      1422
+Info:      36000 |    11396      24603 |  480   520 |      1316
+Info:      37000 |    11723      25276 |  327   673 |       917
+Info:      38000 |    11962      26037 |  239   761 |       355
+Info:      39000 |    12451      26548 |  489   511 |       308
+Info:      40000 |    12905      27094 |  454   546 |       178
+Info:      40420 |    13049      27371 |  144   277 |         0
+Info: Routing complete.
+Info: Route time 88.42s
+Info: Checksum: 0x6ed54686
+
+Info: Critical path report for clock 'clk12MHz$SB_IO_IN_$glb_clk' (posedge -> posedge):
+Info: curr total
+Info:  2.1  2.1  Source RAM.memArray.3.2.0_RAM.RDATA_12
+Info:  1.9  4.1    Net RAM.memArray.3.2.0_RDATA_1 budget 0.000000 ns (25,19) -> (15,18)
+Info:                Sink RAM.memArray.3.2.0_RDATA_1_SB_LUT4_I1_LC.I1
+Info:  0.4  4.4  Source RAM.memArray.3.2.0_RDATA_1_SB_LUT4_I1_LC.O
+Info:  0.6  5.0    Net RAM.memArray.3.2.0_RDATA_1_SB_LUT4_I1_O budget 0.000000 ns (15,18) -> (15,17)
+Info:                Sink RAM.memArray.3.0.0_RDATA_1_SB_LUT4_I0_O_SB_LUT4_I2_LC.I3
+Info:  0.3  5.4  Source RAM.memArray.3.0.0_RDATA_1_SB_LUT4_I0_O_SB_LUT4_I2_LC.O
+Info:  0.6  5.9    Net RAM.memArray.3.0.0_RDATA_1_SB_LUT4_I0_O_SB_LUT4_I2_O budget 0.000000 ns (15,17) -> (14,17)
+Info:                Sink RV32I.Wb_rdData_SB_LUT4_O_30_I3_SB_LUT4_O_I3_SB_LUT4_O_LC.I2
+Info:  0.4  6.3  Source RV32I.Wb_rdData_SB_LUT4_O_30_I3_SB_LUT4_O_I3_SB_LUT4_O_LC.O
+Info:  1.6  7.9    Net RV32I.Wb_rdData_SB_LUT4_O_30_I3_SB_LUT4_O_I3 budget 0.000000 ns (14,17) -> (14,13)
+Info:                Sink RV32I.Wb_rdData_SB_LUT4_O_30_I3_SB_LUT4_O_LC.I3
+Info:  0.3  8.2  Source RV32I.Wb_rdData_SB_LUT4_O_30_I3_SB_LUT4_O_LC.O
+Info:  2.0 10.2    Net RV32I.Wb_rdData_SB_LUT4_O_30_I3 budget 0.000000 ns (14,13) -> (10,5)
+Info:                Sink RV32I.Wb_rdData_SB_LUT4_O_30_LC.I3
+Info:  0.3 10.5  Source RV32I.Wb_rdData_SB_LUT4_O_30_LC.O
+Info:  1.6 12.1    Net RV32I.Wb_rdData[6] budget 0.000000 ns (10,5) -> (12,10)
+Info:                Sink RV32I.E_rs2Data_SB_LUT4_O_24_I2_SB_LUT4_O_LC.I2
+Info:  0.4 12.5  Source RV32I.E_rs2Data_SB_LUT4_O_24_I2_SB_LUT4_O_LC.O
+Info:  0.6 13.1    Net RV32I.E_rs2Data_SB_LUT4_O_24_I2 budget 0.000000 ns (12,10) -> (12,10)
+Info:                Sink RV32I.E_rs2Data_SB_LUT4_O_24_LC.I2
+Info:  0.4 13.5  Source RV32I.E_rs2Data_SB_LUT4_O_24_LC.O
+Info:  2.0 15.4    Net RV32I.E_rs2Data[6] budget 0.000000 ns (12,10) -> (5,15)
+Info:                Sink RV32I.alu.in2_SB_LUT4_O_24_I3_SB_LUT4_O_LC.I2
+Info:  0.4 15.8  Source RV32I.alu.in2_SB_LUT4_O_24_I3_SB_LUT4_O_LC.O
+Info:  1.6 17.4    Net RV32I.alu.in2_SB_LUT4_O_24_I3 budget 0.000000 ns (5,15) -> (7,16)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_3_LC.I2
+Info:  0.2 17.6  Source RV32I.alu.minus_SB_LUT4_O_3_LC.COUT
+Info:  0.0 17.6    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[7] budget 0.000000 ns (7,16) -> (7,16)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_2_LC.CIN
+Info:  0.1 17.8  Source RV32I.alu.minus_SB_LUT4_O_2_LC.COUT
+Info:  0.2 18.0    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[8] budget 0.190000 ns (7,16) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_1_LC.CIN
+Info:  0.1 18.1  Source RV32I.alu.minus_SB_LUT4_O_1_LC.COUT
+Info:  0.0 18.1    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[9] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_LC.CIN
+Info:  0.1 18.2  Source RV32I.alu.minus_SB_LUT4_O_LC.COUT
+Info:  0.0 18.2    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[10] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_30_LC.CIN
+Info:  0.1 18.3  Source RV32I.alu.minus_SB_LUT4_O_30_LC.COUT
+Info:  0.0 18.3    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[11] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_29_LC.CIN
+Info:  0.1 18.5  Source RV32I.alu.minus_SB_LUT4_O_29_LC.COUT
+Info:  0.0 18.5    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[12] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_28_LC.CIN
+Info:  0.1 18.6  Source RV32I.alu.minus_SB_LUT4_O_28_LC.COUT
+Info:  0.0 18.6    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[13] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_27_LC.CIN
+Info:  0.1 18.7  Source RV32I.alu.minus_SB_LUT4_O_27_LC.COUT
+Info:  0.0 18.7    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[14] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_26_LC.CIN
+Info:  0.1 18.8  Source RV32I.alu.minus_SB_LUT4_O_26_LC.COUT
+Info:  0.0 18.8    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[15] budget 0.000000 ns (7,17) -> (7,17)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_25_LC.CIN
+Info:  0.1 19.0  Source RV32I.alu.minus_SB_LUT4_O_25_LC.COUT
+Info:  0.2 19.2    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[16] budget 0.190000 ns (7,17) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_24_LC.CIN
+Info:  0.1 19.3  Source RV32I.alu.minus_SB_LUT4_O_24_LC.COUT
+Info:  0.0 19.3    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[17] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_23_LC.CIN
+Info:  0.1 19.4  Source RV32I.alu.minus_SB_LUT4_O_23_LC.COUT
+Info:  0.0 19.4    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[18] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_22_LC.CIN
+Info:  0.1 19.5  Source RV32I.alu.minus_SB_LUT4_O_22_LC.COUT
+Info:  0.0 19.5    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[19] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_21_LC.CIN
+Info:  0.1 19.7  Source RV32I.alu.minus_SB_LUT4_O_21_LC.COUT
+Info:  0.0 19.7    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[20] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_19_LC.CIN
+Info:  0.1 19.8  Source RV32I.alu.minus_SB_LUT4_O_19_LC.COUT
+Info:  0.0 19.8    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[21] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_18_LC.CIN
+Info:  0.1 19.9  Source RV32I.alu.minus_SB_LUT4_O_18_LC.COUT
+Info:  0.0 19.9    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[22] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_17_LC.CIN
+Info:  0.1 20.0  Source RV32I.alu.minus_SB_LUT4_O_17_LC.COUT
+Info:  0.0 20.0    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[23] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_16_LC.CIN
+Info:  0.1 20.2  Source RV32I.alu.minus_SB_LUT4_O_16_LC.COUT
+Info:  0.2 20.4    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[24] budget 0.190000 ns (7,18) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_15_LC.CIN
+Info:  0.1 20.5  Source RV32I.alu.minus_SB_LUT4_O_15_LC.COUT
+Info:  0.0 20.5    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[25] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_14_LC.CIN
+Info:  0.1 20.6  Source RV32I.alu.minus_SB_LUT4_O_14_LC.COUT
+Info:  0.0 20.6    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[26] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_13_LC.CIN
+Info:  0.1 20.7  Source RV32I.alu.minus_SB_LUT4_O_13_LC.COUT
+Info:  0.0 20.7    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[27] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_12_LC.CIN
+Info:  0.1 20.9  Source RV32I.alu.minus_SB_LUT4_O_12_LC.COUT
+Info:  0.0 20.9    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[28] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_11_LC.CIN
+Info:  0.1 21.0  Source RV32I.alu.minus_SB_LUT4_O_11_LC.COUT
+Info:  0.0 21.0    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[29] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_10_LC.CIN
+Info:  0.1 21.1  Source RV32I.alu.minus_SB_LUT4_O_10_LC.COUT
+Info:  0.0 21.1    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[30] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_8_LC.CIN
+Info:  0.1 21.2  Source RV32I.alu.minus_SB_LUT4_O_8_LC.COUT
+Info:  0.3 21.5    Net RV32I.alu.in2_SB_LUT4_O_I3_SB_CARRY_I1_CO[31] budget 0.260000 ns (7,19) -> (7,19)
+Info:                Sink RV32I.alu.minus_SB_LUT4_O_7_LC.I3
+Info:  0.3 21.8  Source RV32I.alu.minus_SB_LUT4_O_7_LC.O
+Info:  0.6 22.4    Net RV32I.alu.minus[31] budget 3.440000 ns (7,19) -> (6,19)
+Info:                Sink RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_O_LC.I0
+Info:  0.4 22.9  Source RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I1_SB_LUT4_O_LC.O
+Info:  0.6 23.4    Net RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I1 budget 3.248000 ns (6,19) -> (6,19)
+Info:                Sink RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_LC.I1
+Info:  0.4 23.8  Source RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_LC.O
+Info:  1.1 25.0    Net RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_I1 budget 2.768000 ns (6,19) -> (10,19)
+Info:                Sink RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_LC.I1
+Info:  0.4 25.4  Source RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0_SB_LUT4_O_LC.O
+Info:  0.6 26.0    Net RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_I0 budget 2.768000 ns (10,19) -> (10,20)
+Info:                Sink RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_LC.I0
+Info:  0.4 26.4  Source RV32I.DE_isBRANCH_SB_LUT4_I3_I2_SB_LUT4_O_LC.O
+Info:  0.6 27.0    Net RV32I.DE_isBRANCH_SB_LUT4_I3_I2 budget 3.178000 ns (10,20) -> (9,21)
+Info:                Sink RV32I.DE_isBRANCH_SB_LUT4_I3_LC.I2
+Info:  0.4 27.4  Source RV32I.DE_isBRANCH_SB_LUT4_I3_LC.O
+Info:  2.0 29.3    Net RV32I.DE_isBRANCH_SB_LUT4_I3_O budget 3.578000 ns (9,21) -> (2,25)
+Info:                Sink RV32I.F_pc_SB_DFFESR_Q_31_E_SB_LUT4_O_I3_SB_LUT4_O_LC.I3
+Info:  0.3 29.6  Source RV32I.F_pc_SB_DFFESR_Q_31_E_SB_LUT4_O_I3_SB_LUT4_O_LC.O
+Info:  1.3 31.0    Net RV32I.F_pc_SB_DFFESR_Q_31_E_SB_LUT4_O_I3 budget 2.899000 ns (2,25) -> (3,23)
+Info:                Sink RV32I.F_pc_SB_DFFESR_Q_31_E_SB_LUT4_O_LC.I3
+Info:  0.3 31.3  Source RV32I.F_pc_SB_DFFESR_Q_31_E_SB_LUT4_O_LC.O
+Info:  3.7 35.0    Net RV32I.F_pc_SB_DFFESR_Q_31_E budget 3.861000 ns (3,23) -> (27,20)
+Info:                Sink RV32I.E_JumpAddr_SB_LUT4_O_LC.CEN
+Info:  0.1 35.1  Setup RV32I.E_JumpAddr_SB_LUT4_O_LC.CEN
+Info: 11.4 ns logic, 23.7 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge clk12MHz$SB_IO_IN_$glb_clk':
+Info: curr total
+Info:  0.0  0.0  Source key[2]$sb_io.D_IN_0
+Info:  1.7  1.7    Net key[2]$SB_IO_IN budget 40.487999 ns (26,33) -> (26,16)
+Info:                Sink key_SB_LUT4_I3_1_LC.I3
+Info:  0.3  2.0  Source key_SB_LUT4_I3_1_LC.O
+Info:  1.9  3.9    Net key_SB_LUT4_I3_1_O budget 13.120000 ns (26,16) -> (17,12)
+Info:                Sink key_SB_LUT4_I3_O_SB_LUT4_O_LC.I1
+Info:  0.4  4.3  Setup key_SB_LUT4_I3_O_SB_LUT4_O_LC.I1
+Info: 0.7 ns logic, 3.6 ns routing
+
+Info: Critical path report for cross-domain path 'posedge clk12MHz$SB_IO_IN_$glb_clk' -> '<async>':
+Info: curr total
+Info:  0.5  0.5  Source LEDS8_4.act_row_SB_DFFSS_Q_2_D_SB_LUT4_O_LC.O
+Info:  3.6  4.1    Net lcol[1]$SB_IO_OUT budget 82.792999 ns (27,8) -> (16,33)
+Info:                Sink lcol[1]$sb_io.D_OUT_0
+Info: 0.5 ns logic, 3.6 ns routing
+
+Info: Max frequency for clock 'clk12MHz$SB_IO_IN_$glb_clk': 28.47 MHz (PASS at 12.00 MHz)
+
+Info: Max delay <async>                            -> posedge clk12MHz$SB_IO_IN_$glb_clk: 4.31 ns
+Info: Max delay posedge clk12MHz$SB_IO_IN_$glb_clk -> <async>                           : 4.11 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 19 endpoint(s)
+Info:          + represents [1,19) endpoint(s)
+Info: [ 28172,  30878) |*********************************************+
+Info: [ 30878,  33584) |**********+
+Info: [ 33584,  36290) |************************************************************
+Info: [ 36290,  38996) |*+
+Info: [ 38996,  41702) |
+Info: [ 41702,  44408) |
+Info: [ 44408,  47114) |
+Info: [ 47114,  49820) |+
+Info: [ 49820,  52526) |**+
+Info: [ 52526,  55232) |**+
+Info: [ 55232,  57938) |**+
+Info: [ 57938,  60644) |+
+Info: [ 60644,  63350) |******+
+Info: [ 63350,  66056) |*************+
+Info: [ 66056,  68762) |******+
+Info: [ 68762,  71468) |**************+
+Info: [ 71468,  74174) |**************************+
+Info: [ 74174,  76880) |********************************+
+Info: [ 76880,  79586) |**************************+
+Info: [ 79586,  82292) |*************************************************+
+2 warnings, 0 errors
+icepack hardware.asc hardware.bin
+icefunprog /dev/ttyACM0 hardware.bin
+Flash ID 0x1f 0x85 0x1
+Program length 135100
+Erase pages 3
+Erasing sector 0x00000
+Erase sector response 0xb0
+Erasing sector 0x10000
+Erase sector response 0xb0
+Erasing sector 0x20000
+Erase sector response 0xb0
+################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+Flash ok
+Release response 0x0
+======================== [SUCCESS] Took 237.15 seconds ========================
